@@ -14,7 +14,7 @@ def post_list(request):
 
     return render(request, template_name='posts/list.html', context=ctx)
 
-def post_detail(request, post_id);
+def post_detail(request, post_id):
     '''
     Read(R)
     특정 포스트를 불러와서 상세정보를 보여준다
@@ -22,4 +22,4 @@ def post_detail(request, post_id);
     post=Post.objects.get(id=post_id)
     ctx={'post':post}
 
-    return(request, template_name='post/detail.html')
+    return render(request, template_name='post/detail.html')
